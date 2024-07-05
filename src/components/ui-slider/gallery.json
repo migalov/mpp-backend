@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_ui_slider_galleries",
+  "info": {
+    "displayName": "Gallery",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui-slider.image"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_seo_seo_blocks",
+  "info": {
+    "displayName": "SeoBlock"
+  },
+  "options": {},
+  "attributes": {
+    "body": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

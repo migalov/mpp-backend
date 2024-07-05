@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_ui_slider_images",
+  "info": {
+    "displayName": "Image",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "src": {
+      "type": "string"
+    }
+  }
+}

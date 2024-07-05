@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_ui_elements_features_blocks",
+  "info": {
+    "displayName": "FeaturesBlock"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui-elements.feature-item"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_ui_elements_steps_blocks",
+  "info": {
+    "displayName": "StepsBlock"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui-elements.step-item"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_ui_slider_banners",
+  "info": {
+    "displayName": "Banner",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "src": {
+      "type": "string"
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "buttonURL": {
+      "type": "string"
+    },
+    "testImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_ui_slider_sliders",
+  "info": {
+    "displayName": "Slider"
+  },
+  "options": {},
+  "attributes": {
+    "banners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui-slider.banner"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "fotobook_for_yous",
+  "info": {
+    "singularName": "fotobook-for-you",
+    "pluralName": "fotobook-for-yous",
+    "displayName": "FotobookForYou",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "featuresBlock": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui-elements.features-block"
+    }
+  }
+}

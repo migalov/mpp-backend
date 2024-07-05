@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_ui_elements_category_items",
+  "info": {
+    "displayName": "CategoryItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "src": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
