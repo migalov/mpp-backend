@@ -4,9 +4,17 @@ export interface SeoSeoBlock extends Schema.Component {
   collectionName: 'components_seo_seo_blocks';
   info: {
     displayName: 'SeoBlock';
+    description: '';
   };
   attributes: {
-    body: Attribute.RichText &
+    column1: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
+    column2: Attribute.RichText &
       Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -43,12 +51,13 @@ export interface UiElementsCategoryItem extends Schema.Component {
   collectionName: 'components_ui_elements_category_items';
   info: {
     displayName: 'CategoryItem';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
-    price: Attribute.String;
     src: Attribute.String;
     url: Attribute.String;
+    price: Attribute.Integer;
   };
 }
 
@@ -86,10 +95,18 @@ export interface UiElementsStepItem extends Schema.Component {
   collectionName: 'components_ui_elements_step_items';
   info: {
     displayName: 'StepItem';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     color: Attribute.Enumeration<['green', 'gray', 'violet', 'orange']>;
+    body: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
   };
 }
 

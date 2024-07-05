@@ -362,80 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiFotobookForYouFotobookForYou extends Schema.SingleType {
-  collectionName: 'fotobook_for_yous';
-  info: {
-    singularName: 'fotobook-for-you';
-    pluralName: 'fotobook-for-yous';
-    displayName: 'FotobookForYou';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    featuresBlock: Attribute.Component<'ui-elements.features-block'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::fotobook-for-you.fotobook-for-you',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::fotobook-for-you.fotobook-for-you',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiLandingPageLandingPage extends Schema.CollectionType {
-  collectionName: 'landing_pages';
-  info: {
-    singularName: 'landing-page';
-    pluralName: 'landing-pages';
-    displayName: 'Landing Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    slug: Attribute.String;
-    content: Attribute.DynamicZone<
-      [
-        'seo.seo-block',
-        'ui-elements.categories-block',
-        'ui-elements.features-block',
-        'ui-elements.steps-block',
-        'ui-slider.banner',
-        'ui-slider.gallery',
-        'ui-slider.slider'
-      ]
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::landing-page.landing-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::landing-page.landing-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -862,6 +788,112 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiFotobookForYouFotobookForYou extends Schema.SingleType {
+  collectionName: 'fotobook_for_yous';
+  info: {
+    singularName: 'fotobook-for-you';
+    pluralName: 'fotobook-for-yous';
+    displayName: 'FotobookForYou';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    featuresBlock: Attribute.Component<'ui-elements.features-block'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::fotobook-for-you.fotobook-for-you',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::fotobook-for-you.fotobook-for-you',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLandingPageLandingPage extends Schema.CollectionType {
+  collectionName: 'landing_pages';
+  info: {
+    singularName: 'landing-page';
+    pluralName: 'landing-pages';
+    displayName: 'Landing Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    slug: Attribute.String;
+    content: Attribute.DynamicZone<
+      [
+        'seo.seo-block',
+        'ui-elements.categories-block',
+        'ui-elements.features-block',
+        'ui-elements.steps-block',
+        'ui-slider.banner',
+        'ui-slider.gallery',
+        'ui-slider.slider'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::landing-page.landing-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::landing-page.landing-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSelfAssemblySelfAssembly extends Schema.SingleType {
+  collectionName: 'self_assemblies';
+  info: {
+    singularName: 'self-assembly';
+    pluralName: 'self-assemblies';
+    displayName: 'Self Assembly';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    stepsBlock: Attribute.Component<'ui-elements.steps-block'>;
+    button: Attribute.Component<'ui-elements.button'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::self-assembly.self-assembly',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::self-assembly.self-assembly',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -872,8 +904,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::fotobook-for-you.fotobook-for-you': ApiFotobookForYouFotobookForYou;
-      'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -882,6 +912,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::fotobook-for-you.fotobook-for-you': ApiFotobookForYouFotobookForYou;
+      'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::self-assembly.self-assembly': ApiSelfAssemblySelfAssembly;
     }
   }
 }

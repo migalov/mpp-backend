@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "self_assemblies",
+  "info": {
+    "singularName": "self-assembly",
+    "pluralName": "self-assemblies",
+    "displayName": "Self Assembly",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stepsBlock": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui-elements.steps-block"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui-elements.button"
+    }
+  }
+}

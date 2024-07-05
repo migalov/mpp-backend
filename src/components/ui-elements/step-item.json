@@ -1,7 +1,8 @@
 {
   "collectionName": "components_ui_elements_step_items",
   "info": {
-    "displayName": "StepItem"
+    "displayName": "StepItem",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -16,6 +17,13 @@
         "violet",
         "orange"
       ]
+    },
+    "body": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

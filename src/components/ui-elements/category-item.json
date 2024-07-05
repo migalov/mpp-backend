@@ -1,14 +1,12 @@
 {
   "collectionName": "components_ui_elements_category_items",
   "info": {
-    "displayName": "CategoryItem"
+    "displayName": "CategoryItem",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "price": {
       "type": "string"
     },
     "src": {
@@ -16,6 +14,9 @@
     },
     "url": {
       "type": "string"
+    },
+    "price": {
+      "type": "integer"
     }
   }
 }
