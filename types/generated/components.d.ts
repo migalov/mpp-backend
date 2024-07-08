@@ -141,6 +141,8 @@ export interface UiSliderBanner extends Schema.Component {
     buttonLabel: Attribute.String;
     buttonURL: Attribute.String;
     testImage: Attribute.Media<'images'>;
+    srcMobile: Attribute.String;
+    srcDesktop: Attribute.String;
   };
 }
 
