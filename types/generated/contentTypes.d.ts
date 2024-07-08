@@ -841,7 +841,8 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
         'ui-elements.steps-block',
         'ui-slider.banner',
         'ui-slider.gallery',
-        'ui-slider.slider'
+        'ui-slider.slider',
+        'table.table'
       ]
     >;
     createdAt: Attribute.DateTime;

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_table_delivery_rows",
+  "info": {
+    "displayName": "Row",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "city": {
+      "type": "string"
+    },
+    "days": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}

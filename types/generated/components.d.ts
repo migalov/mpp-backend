@@ -24,6 +24,43 @@ export interface SeoSeoBlock extends Schema.Component {
   };
 }
 
+export interface TableBody extends Schema.Component {
+  collectionName: 'components_table_bodies';
+  info: {
+    displayName: 'Body';
+    icon: 'apps';
+  };
+  attributes: {
+    title: Attribute.String;
+    end: Attribute.String;
+  };
+}
+
+export interface TableRow extends Schema.Component {
+  collectionName: 'components_table_delivery_rows';
+  info: {
+    displayName: 'Row';
+    description: '';
+  };
+  attributes: {
+    city: Attribute.String;
+    days: Attribute.String;
+    price: Attribute.Integer;
+  };
+}
+
+export interface TableTable extends Schema.Component {
+  collectionName: 'components_table_tables';
+  info: {
+    displayName: 'Table';
+    icon: 'apps';
+  };
+  attributes: {
+    body: Attribute.Component<'table.body'>;
+    rows: Attribute.Component<'table.row', true>;
+  };
+}
+
 export interface UiElementsButton extends Schema.Component {
   collectionName: 'components_ui_elements_buttons';
   info: {
@@ -183,6 +220,9 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'seo.seo-block': SeoSeoBlock;
+      'table.body': TableBody;
+      'table.row': TableRow;
+      'table.table': TableTable;
       'ui-elements.button': UiElementsButton;
       'ui-elements.categories-block': UiElementsCategoriesBlock;
       'ui-elements.category-item': UiElementsCategoryItem;
