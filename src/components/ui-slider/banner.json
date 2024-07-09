@@ -39,6 +39,17 @@
     },
     "srcDesktop": {
       "type": "string"
+    },
+    "bgColor": {
+      "type": "enumeration",
+      "enum": [
+        "orange",
+        "green",
+        "violet"
+      ]
+    },
+    "price": {
+      "type": "integer"
     }
   }
 }

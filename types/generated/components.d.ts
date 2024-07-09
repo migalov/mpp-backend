@@ -1,5 +1,39 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface HtmlBitrixForm extends Schema.Component {
+  collectionName: 'components_html_bitrix_forms';
+  info: {
+    displayName: 'Bitrix Form';
+    icon: 'envelop';
+  };
+  attributes: {
+    title: Attribute.String;
+    script: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
+  };
+}
+
+export interface HtmlHtmlBlock extends Schema.Component {
+  collectionName: 'components_html_html_blocks';
+  info: {
+    displayName: 'HTML Block';
+  };
+  attributes: {
+    body: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
+  };
+}
+
 export interface SeoSeoBlock extends Schema.Component {
   collectionName: 'components_seo_seo_blocks';
   info: {
@@ -29,10 +63,12 @@ export interface TableBody extends Schema.Component {
   info: {
     displayName: 'Body';
     icon: 'apps';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     end: Attribute.String;
+    color: Attribute.Enumeration<['violet', 'green']>;
   };
 }
 
@@ -128,6 +164,23 @@ export interface UiElementsFeaturesBlock extends Schema.Component {
   };
 }
 
+export interface UiElementsIFrame extends Schema.Component {
+  collectionName: 'components_ui_elements_i_frames';
+  info: {
+    displayName: 'IFrame';
+  };
+  attributes: {
+    src: Attribute.String;
+    body: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
+  };
+}
+
 export interface UiElementsStepItem extends Schema.Component {
   collectionName: 'components_ui_elements_step_items';
   info: {
@@ -180,6 +233,8 @@ export interface UiSliderBanner extends Schema.Component {
     testImage: Attribute.Media<'images'>;
     srcMobile: Attribute.String;
     srcDesktop: Attribute.String;
+    bgColor: Attribute.Enumeration<['orange', 'green', 'violet']>;
+    price: Attribute.Integer;
   };
 }
 
@@ -219,6 +274,8 @@ export interface UiSliderSlider extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'html.bitrix-form': HtmlBitrixForm;
+      'html.html-block': HtmlHtmlBlock;
       'seo.seo-block': SeoSeoBlock;
       'table.body': TableBody;
       'table.row': TableRow;
@@ -228,6 +285,7 @@ declare module '@strapi/types' {
       'ui-elements.category-item': UiElementsCategoryItem;
       'ui-elements.feature-item': UiElementsFeatureItem;
       'ui-elements.features-block': UiElementsFeaturesBlock;
+      'ui-elements.i-frame': UiElementsIFrame;
       'ui-elements.step-item': UiElementsStepItem;
       'ui-elements.steps-block': UiElementsStepsBlock;
       'ui-slider.banner': UiSliderBanner;

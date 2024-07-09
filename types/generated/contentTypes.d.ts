@@ -842,7 +842,10 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
         'ui-slider.banner',
         'ui-slider.gallery',
         'ui-slider.slider',
-        'table.table'
+        'table.table',
+        'html.html-block',
+        'ui-elements.i-frame',
+        'html.bitrix-form'
       ]
     >;
     createdAt: Attribute.DateTime;

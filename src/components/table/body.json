@@ -2,7 +2,8 @@
   "collectionName": "components_table_bodies",
   "info": {
     "displayName": "Body",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,6 +12,13 @@
     },
     "end": {
       "type": "string"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "violet",
+        "green"
+      ]
     }
   }
 }

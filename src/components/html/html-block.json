@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_html_html_blocks",
+  "info": {
+    "displayName": "HTML Block"
+  },
+  "options": {},
+  "attributes": {
+    "body": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

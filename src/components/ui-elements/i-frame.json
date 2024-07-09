@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_ui_elements_i_frames",
+  "info": {
+    "displayName": "IFrame"
+  },
+  "options": {},
+  "attributes": {
+    "src": {
+      "type": "string"
+    },
+    "body": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}
