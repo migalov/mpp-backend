@@ -1,5 +1,34 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface FaqFaqBlock extends Schema.Component {
+  collectionName: 'components_faq_faq_blocks';
+  info: {
+    displayName: 'FAQBlock';
+  };
+  attributes: {
+    title: Attribute.String;
+    anchor: Attribute.String;
+    items: Attribute.Component<'faq.faq-item', true>;
+  };
+}
+
+export interface FaqFaqItem extends Schema.Component {
+  collectionName: 'components_faq_faq_items';
+  info: {
+    displayName: 'FAQItem';
+  };
+  attributes: {
+    title: Attribute.String;
+    body: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
+  };
+}
+
 export interface HtmlBitrixForm extends Schema.Component {
   collectionName: 'components_html_bitrix_forms';
   info: {
@@ -243,10 +272,18 @@ export interface UiSliderGallery extends Schema.Component {
   info: {
     displayName: 'Gallery';
     icon: 'landscape';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     images: Attribute.Component<'ui-slider.image', true>;
+    body: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
   };
 }
 
@@ -274,6 +311,8 @@ export interface UiSliderSlider extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'faq.faq-block': FaqFaqBlock;
+      'faq.faq-item': FaqFaqItem;
       'html.bitrix-form': HtmlBitrixForm;
       'html.html-block': HtmlHtmlBlock;
       'seo.seo-block': SeoSeoBlock;

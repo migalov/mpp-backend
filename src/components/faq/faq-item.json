@@ -1,19 +1,12 @@
 {
-  "collectionName": "components_ui_slider_galleries",
+  "collectionName": "components_faq_faq_items",
   "info": {
-    "displayName": "Gallery",
-    "icon": "landscape",
-    "description": ""
+    "displayName": "FAQItem"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
-    },
-    "images": {
-      "type": "component",
-      "repeatable": true,
-      "component": "ui-slider.image"
     },
     "body": {
       "type": "customField",

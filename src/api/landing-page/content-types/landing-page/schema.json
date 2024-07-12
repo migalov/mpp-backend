@@ -31,7 +31,9 @@
         "table.table",
         "html.html-block",
         "ui-elements.i-frame",
-        "html.bitrix-form"
+        "html.bitrix-form",
+        "faq.faq-block",
+        "faq.faq-item"
       ]
     }
   }

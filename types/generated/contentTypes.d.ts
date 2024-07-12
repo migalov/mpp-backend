@@ -845,7 +845,9 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
         'table.table',
         'html.html-block',
         'ui-elements.i-frame',
-        'html.bitrix-form'
+        'html.bitrix-form',
+        'faq.faq-block',
+        'faq.faq-item'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -898,6 +900,37 @@ export interface ApiSelfAssemblySelfAssembly extends Schema.SingleType {
   };
 }
 
+export interface ApiServiceService extends Schema.SingleType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'Service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    service: Attribute.Component<'ui-slider.banner', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -919,6 +952,7 @@ declare module '@strapi/types' {
       'api::fotobook-for-you.fotobook-for-you': ApiFotobookForYouFotobookForYou;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::self-assembly.self-assembly': ApiSelfAssemblySelfAssembly;
+      'api::service.service': ApiServiceService;
     }
   }
 }
