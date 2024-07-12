@@ -264,6 +264,8 @@ export interface UiSliderBanner extends Schema.Component {
     srcDesktop: Attribute.String;
     bgColor: Attribute.Enumeration<['orange', 'green', 'violet']>;
     price: Attribute.Integer;
+    reverse: Attribute.Boolean & Attribute.DefaultTo<false>;
+    width: Attribute.String;
   };
 }
 

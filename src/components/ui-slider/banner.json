@@ -50,6 +50,13 @@
     },
     "price": {
       "type": "integer"
+    },
+    "reverse": {
+      "type": "boolean",
+      "default": false
+    },
+    "width": {
+      "type": "string"
     }
   }
 }
